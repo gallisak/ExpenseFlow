@@ -17,33 +17,33 @@ export default function SideBar() {
           <Wallet className="mt-6" color="white" size={35} />
           <h1 className="text-white font-black mt-2">Expense Flow</h1>
 
-          <div className="mt-10 p-1 bg-cyan-500 rounded-sm">
+          <div className="mt-10 p-1 bg-violet-400 rounded-sm">
             <House color="white" size={35} />
           </div>
 
-          <div className="mt-7 p-1 hover:bg-cyan-500 rounded-sm">
+          <div className="mt-7 p-1 hover:bg-violet-400 rounded-sm">
             <Gauge color="white" size={35} />
           </div>
 
-          <div className="mt-7 p-1 hover:bg-cyan-500 rounded-sm">
+          <div className="mt-7 p-1 hover:bg-violet-400 rounded-sm">
             <Activity color="white" size={35} />
           </div>
 
-          <div className="mt-7 p-1 hover:bg-cyan-500 rounded-sm">
+          <div className="mt-7 p-1 hover:bg-violet-400 rounded-sm">
             <MessageSquareText color="white" size={35} />
           </div>
 
-          <div className="mt-7 p-1 hover:bg-cyan-500 rounded-sm">
+          <div className="mt-7 p-1 hover:bg-violet-400 rounded-sm">
             <Trophy color="white" size={35} />
           </div>
         </div>
 
         <div>
-          <div className="mb-7 p-1 hover:bg-cyan-500 rounded-sm">
+          <div className="mb-7 p-1 hover:bg-violet-400 rounded-sm">
             <Headset color="white" size={35} />
           </div>
 
-          <div className="mb-6 p-1 hover:bg-cyan-500 rounded-sm">
+          <div className="mb-6 p-1 hover:bg-violet-400 rounded-sm">
             <Settings color="white" size={35} />
           </div>
         </div>

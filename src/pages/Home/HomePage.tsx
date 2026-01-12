@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
 
 import { ShoppingBag, Coffee, Home, ArrowUpRight } from "lucide-react";
+import AreaChart from "../../components/AreaChart";
 
 // Temporarily!
 interface Transaction {
@@ -158,6 +159,10 @@ export default function HomePage() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="ml-30">
+        <h3 className="ml-15 font-bold text-2xl mt-10">Balance</h3>
+        <AreaChart />
       </div>
     </>
   );

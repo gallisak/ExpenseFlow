@@ -6,6 +6,70 @@ import {
 import Header from "../../components/Header";
 import SideBar from "../../components/SideBar";
 
+import { ShoppingBag, Coffee, Home, ArrowUpRight } from "lucide-react";
+
+// Temporarily!
+interface Transaction {
+  id: number;
+  name: string;
+  category: string;
+  date: string;
+  amount: number;
+  type: "income" | "expense";
+  icon: any;
+  iconBg: string;
+  iconColor: string;
+}
+
+const transactions: Transaction[] = [
+  {
+    id: 1,
+    name: "Groceries (Silpo)",
+    category: "Food",
+    date: "Today, 10:45 AM",
+    amount: -450,
+    type: "expense",
+    icon: ShoppingBag,
+    iconBg: "bg-orange-100",
+    iconColor: "text-orange-600",
+  },
+  {
+    id: 2,
+    name: "Freelance Project",
+    category: "Work",
+    date: "Yesterday, 14:30 PM",
+    amount: 1200,
+    type: "income",
+    icon: ArrowUpRight,
+    iconBg: "bg-green-100",
+    iconColor: "text-green-600",
+  },
+  {
+    id: 3,
+    name: "Coffee & Cake",
+    category: "Cafe",
+    date: "Jan 10, 09:15 AM",
+    amount: -120,
+    type: "expense",
+    icon: Coffee,
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600",
+  },
+  {
+    id: 4,
+    name: "Rent Payment",
+    category: "Home",
+    date: "Jan 01, 10:00 AM",
+    amount: -8000,
+    type: "expense",
+    icon: Home,
+    iconBg: "bg-purple-100",
+    iconColor: "text-purple-600",
+  },
+];
+
+// Temporarily
+
 export default function HomePage() {
   return (
     <>
@@ -62,6 +126,38 @@ export default function HomePage() {
             <p>from last month</p>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col gap-4 ml-30 mt-5">
+        <h3 className="ml-15 font-bold text-2xl">Transaction History</h3>
+        {transactions.map((item) => (
+          <div
+            key={item.id}
+            className="flex items-center justify-between p-3 hover:bg-gray-50 transition-colors pl-15 cursor-pointer"
+          >
+            <div className="flex items-center gap-4">
+              <div
+                className={`p-3 rounded-full ${item.iconBg} ${item.iconColor}`}
+              >
+                <item.icon size={20} />
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-800">{item.name}</p>
+                <p className="text-xs text-gray-400">{item.date}</p>
+              </div>
+            </div>
+
+            <div
+              className={`font-bold ${
+                item.type === "income" ? "text-green-600" : "text-gray-800"
+              }`}
+            >
+              {item.type === "income" ? "+" : ""}
+              {item.amount} $
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

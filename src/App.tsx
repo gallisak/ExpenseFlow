@@ -1,9 +1,9 @@
-import SideBar from "./components/SideBar";
+import HomePage from "./pages/Home/HomePage";
 
 export default function App() {
   return (
     <>
-      <SideBar />
+      <HomePage />
     </>
   );
 }
